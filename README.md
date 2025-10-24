@@ -45,31 +45,8 @@ A beautiful, modern calculator app built with Flutter featuring a stunning sage 
 - Modern rounded button design
 - 4x4 button grid layout
 
-## 🚀 Getting Started
 
-### Prerequisites
-- Flutter SDK (3.0 or higher)
-- Dart SDK
-- Android Studio / VS Code
-- Android Emulator or Physical Device
 
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/sage-green-calculator.git
-   cd sage-green-calculator
-   ```
-
-2. **Install dependencies**
-   ```bash
-   flutter pub get
-   ```
-
-3. **Run the app**
-   ```bash
-   flutter run
-   ```
 
 ## 🎨 Color Palette
 
@@ -84,22 +61,6 @@ A beautiful, modern calculator app built with Flutter featuring a stunning sage 
 | Operation Buttons | Light Sage | `#87A96B` |
 | Result Display | Soft Sage | `#9CAF88` |
 
-## 🏗️ Project Structure
-
-```
-lib/
-├── main.dart          # Main app entry point and calculator logic
-```
-
-## 📦 Dependencies
-
-```yaml
-dependencies:
-  flutter:
-    sdk: flutter
-  math_expressions: ^2.7.0  # Mathematical expression evaluation
-  cupertino_icons: ^1.0.8
-```
 
 ## 🔧 Key Components
 
@@ -178,56 +139,6 @@ If you encounter overflow errors:
 - Display constraints are set between 140-160px height
 - All content is scrollable if needed
 
-### Build Errors
-```bash
-flutter clean
-flutter pub get
-flutter run
-```
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👨‍💻 Author
-
-Built with ❤️ and Flutter
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## ⭐ Show Your Support
-
-Give a ⭐️ if you like this project!
-
-## 📝 Changelog
-
-### Version 1.0.0
-- ✅ Initial release
-- ✅ Sage green theme
-- ✅ Glassmorphism design
-- ✅ Basic calculator operations
-- ✅ Advanced features (+/-, %, ⌫)
-- ✅ Responsive layout
-- ✅ Error handling
-
-## 🔮 Future Enhancements
-
-- [ ] Scientific calculator mode
-- [ ] History feature
-- [ ] Theme switcher (multiple color schemes)
-- [ ] Haptic feedback
-- [ ] Sound effects
-- [ ] Landscape mode support
-- [ ] Memory functions (M+, M-, MR, MC)
-- [ ] Unit conversions
 
 ## 📧 Contact
 
