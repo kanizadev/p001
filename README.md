@@ -38,15 +38,12 @@ A beautiful, modern calculator app built with Flutter featuring a stunning sage 
 - Production-ready
 
 ## 📱 Screenshots
-<img src="https://raw.githubusercontent.com/kanizadev/p001/refs/heads/main/calculator.png" alt="Calculator" style="width:209px;height:328.333px;">
 
 ### Main Calculator Screen
 - Beautiful sage green gradient background
 - Glassmorphism display with glowing border
 - Modern rounded button design
 - 4x4 button grid layout
-
-
 
 
 ## 🎨 Color Palette
@@ -62,25 +59,6 @@ A beautiful, modern calculator app built with Flutter featuring a stunning sage 
 | Operation Buttons | Light Sage | `#87A96B` |
 | Result Display | Soft Sage | `#9CAF88` |
 
-
-## 🔧 Key Components
-
-### Calculator State
-- `equation`: Current input equation
-- `result`: Calculated result
-- `expression`: Parsed mathematical expression
-
-### Button Widget
-- Gradient background
-- Shadow effects with color glow
-- Ripple animation on tap
-- Customizable size and color
-
-### Display Area
-- Glassmorphism container
-- Flexible height constraints
-- Horizontal scrolling
-- Glowing text effects
 
 ## 💡 Usage Examples
 
@@ -140,6 +118,20 @@ If you encounter overflow errors:
 - Display constraints are set between 140-160px height
 - All content is scrollable if needed
 
+## ⭐ Show Your Support
+
+Give a ⭐️ if you like this project!
+
+## 📝 Changelog
+
+### Version 1.0.0
+- ✅ Initial release
+- ✅ Sage green theme
+- ✅ Glassmorphism design
+- ✅ Basic calculator operations
+- ✅ Advanced features (+/-, %, ⌫)
+- ✅ Responsive layout
+- ✅ Error handling
 
 ## 📧 Contact
 
