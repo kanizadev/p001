@@ -38,6 +38,7 @@ A beautiful, modern calculator app built with Flutter featuring a stunning sage 
 - Production-ready
 
 ## 📱 Screenshots
+<img src="https://raw.githubusercontent.com/kanizadev/p001/refs/heads/main/calculator.png" alt="Calculator" style="width:209px;height:328.333px;">
 
 ### Main Calculator Screen
 - Beautiful sage green gradient background
