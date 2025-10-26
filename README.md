@@ -122,16 +122,7 @@ If you encounter overflow errors:
 
 Give a ⭐️ if you like this project!
 
-## 📝 Changelog
 
-### Version 1.0.0
-- ✅ Initial release
-- ✅ Sage green theme
-- ✅ Glassmorphism design
-- ✅ Basic calculator operations
-- ✅ Advanced features (+/-, %, ⌫)
-- ✅ Responsive layout
-- ✅ Error handling
 
 ## 📧 Contact
 
