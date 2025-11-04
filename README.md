@@ -1,3 +1,5 @@
+ <img src="https://raw.githubusercontent.com/kanizadev/kanizadev/refs/heads/main/banner.png" />
+ 
 # 🌿 Sage Green Calculator
 
 A beautiful, modern calculator app built with Flutter featuring a stunning sage green color scheme and glassmorphism design.
@@ -38,6 +40,8 @@ A beautiful, modern calculator app built with Flutter featuring a stunning sage 
 - Production-ready
 
 ## 📱 Screenshots
+
+<img src="https://raw.githubusercontent.com/kanizadev/p001/refs/heads/main/p001.png" hight=446 width=243 />
 
 ### Main Calculator Screen
 - Beautiful sage green gradient background
@@ -131,3 +135,4 @@ For questions or suggestions, please open an issue on GitHub.
 ---
 
 Made with Flutter 💙 | Designed with Nature 🌿
+ <img src="https://raw.githubusercontent.com/kanizadev/kanizadev/refs/heads/main/footer.png" />
