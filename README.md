@@ -1,4 +1,4 @@
- <img src="https://raw.githubusercontent.com/kanizadev/kanizadev/refs/heads/main/banner.png" />
+
  
 # 🌿 Sage Green Calculator
 
@@ -135,4 +135,3 @@ For questions or suggestions, please open an issue on GitHub.
 ---
 
 Made with Flutter 💙 | Designed with Nature 🌿
- <img src="https://raw.githubusercontent.com/kanizadev/kanizadev/refs/heads/main/footer.png" />
