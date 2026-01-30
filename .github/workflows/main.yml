@@ -1,0 +1,54 @@
+
+name: "Android Build & Release"
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build & Release Android
+    # Ubuntu is much faster and cheaper for Android builds
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu' # Recommended distribution
+          java-version: '17'   # Flutter 3.x+ usually prefers Java 17
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.x' # Or keep '2.2.0' if your project is older
+          channel: 'stable'
+          cache: true            # Speeds up subsequent runs
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      - name: Run Tests
+        run: flutter test
+
+      - name: Build APK
+        # Standard release build is usually better for releases than --debug
+        run: flutter build apk --release --split-per-abi
+
+      - name: Build App Bundle (AAB)
+        # Required for Google Play Store uploads
+        run: flutter build appbundle --release
+
+      - name: Push to Releases
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/app/outputs/flutter-apk/*.apk,build/app/outputs/bundle/release/*.aab"
+          tag: v1.0.${{ github.run_number }}
+          token: ${{ secrets.GITHUB_TOKEN }}
