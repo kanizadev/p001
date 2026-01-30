@@ -1,18 +1,18 @@
-
 name: "Android Build & Release"
 
 on:
   pull_request:
-    branches:
-      - main
+    branches: [main]
   push:
-    branches:
-      - main
+    branches: [main]
+
+# Necessary to allow the action to create a Release
+permissions:
+  contents: write
 
 jobs:
   build:
     name: Build & Release Android
-    # Ubuntu is much faster and cheaper for Android builds
     runs-on: ubuntu-latest
 
     steps:
@@ -22,15 +22,15 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'zulu' # Recommended distribution
-          java-version: '17'   # Flutter 3.x+ usually prefers Java 17
+          distribution: 'zulu'
+          java-version: '17'
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.x' # Or keep '2.2.0' if your project is older
+          flutter-version: '3.x'
           channel: 'stable'
-          cache: true            # Speeds up subsequent runs
+          cache: true
 
       - name: Install Dependencies
         run: flutter pub get
@@ -38,12 +38,10 @@ jobs:
       - name: Run Tests
         run: flutter test
 
-      - name: Build APK
-        # Standard release build is usually better for releases than --debug
+      - name: Build APKs
         run: flutter build apk --release --split-per-abi
 
       - name: Build App Bundle (AAB)
-        # Required for Google Play Store uploads
         run: flutter build appbundle --release
 
       - name: Push to Releases
@@ -51,4 +49,5 @@ jobs:
         with:
           artifacts: "build/app/outputs/flutter-apk/*.apk,build/app/outputs/bundle/release/*.aab"
           tag: v1.0.${{ github.run_number }}
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.TOKEN }} # Use the default GitHub token
+          allowUpdates: true # Useful if you re-run the same build number
