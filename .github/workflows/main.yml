@@ -51,7 +51,7 @@ jobs:
           artifacts: "build/app/outputs/flutter-apk/*.apk,build/app/outputs/bundle/release/*.aab"
           tag: v1.0.${{ github.run_number }}
           # Changed to GITHUB_TOKEN which is built-in to GitHub Actions
-          token: ${{ secrets.GITHUB_TOKEN }} 
+          token: ${{ secrets.TOKEN }} 
           allowUpdates: true
           omitBodyDuringUpdate: true
           allowUpdates: true # Useful if you re-run the same build number
