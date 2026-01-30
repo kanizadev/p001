@@ -6,7 +6,7 @@ on:
   push:
     branches: [main]
 
-# Necessary to allow the action to create a Release
+# Necessary to allow the action to create a Release and upload files
 permissions:
   contents: write
 
@@ -36,6 +36,7 @@ jobs:
         run: flutter pub get
 
       - name: Run Tests
+        # Note: Ensure your widget_test.dart is updated to handle multiple "0"s
         run: flutter test
 
       - name: Build APKs
@@ -49,5 +50,8 @@ jobs:
         with:
           artifacts: "build/app/outputs/flutter-apk/*.apk,build/app/outputs/bundle/release/*.aab"
           tag: v1.0.${{ github.run_number }}
-          token: ${{ secrets.TOKEN }} # Use the default GitHub token
+          # Changed to GITHUB_TOKEN which is built-in to GitHub Actions
+          token: ${{ secrets.GITHUB_TOKEN }} 
+          allowUpdates: true
+          omitBodyDuringUpdate: true
           allowUpdates: true # Useful if you re-run the same build number
